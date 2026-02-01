@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Just One Question</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(135deg, #ffe0f0, #c9d6ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 25px;
+      margin: 10px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .yes { background: #ff4d6d; color: white; }
+    .no { background: #ccc; }
+  </style>
+</head>
+<body>
+
+<div class="box" id="step1">
+  <h2>Can I ask you something? 🤍</h2>
+  <button class="yes" onclick="next()">Yes</button>
+  <button class="no" onclick="nope()">No</button>
+</div>
+
+<div class="box" id="step2" style="display:none;">
+  <h2>Aradhya, are you my best friend? 💫</h2>
+  <button class="yes" onclick="final()">Yes</button>
+  <button class="no" onclick="nope()">No</button>
+</div>
+
+<div class="box" id="step3" style="display:none;">
+  <h2>🥹💖</h2>
+  <p>
+    You’re not just my best friend,<br>
+    you’re my safe place.
+  </p>
+  <p><i>“Some people become home without even trying.”</i></p>
+</div>
+
+<script>
+  function next() {
+    step1.style.display = "none";
+    step2.style.display = "block";
+  }
+  function final() {
+    step2.style.display = "none";
+    step3.style.display = "block";
+  }
+  function nope() {
+    alert("Still grateful for you 🌷");
+  }
+</script>
+
+</body>
+</html>
